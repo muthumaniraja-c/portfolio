@@ -43,7 +43,7 @@ export const ProjectList = [
         
         tech: ["React.js", "Tailwind CSS"],
        
-        demo: "https://hire-quotient-notion-clone-aashish.vercel.app/",
+        demo: "https://portfolio-react-sepia-pi-61.vercel.app/",
     },
     {
         id: 4,
