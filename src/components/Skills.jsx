@@ -13,8 +13,10 @@ const frontendSkills = [
 const backendSkills = [
   { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
   { name: "Django", img: "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3253692/django-icon-icon-md.png" },
+  { name: "Rest Api", img: "https://www.iexcel-technologies.com/wp-content/uploads/2020/03/rest-api-logo.png" },
   { name: "MySQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
   { name: "MongoDB", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+  { name: "PostgreSQL", img: "https://logonoid.com/images/postgresql-logo.png" },
 ];
 
 const SkillIcon = ({ skill, color }) => {
