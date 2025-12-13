@@ -37,6 +37,6 @@ export const ProjectList = [
         
         tech: ["React.js", "Tailwind CSS"],
        
-        demo: "https://portfolio-react-sepia-pi-61.vercel.app/",
+        demo: "https://portfolio-umber-nine-49.vercel.app/",
     },
 ];

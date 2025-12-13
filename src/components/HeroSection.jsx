@@ -13,9 +13,14 @@ const HeroSection = () => {
     useEffect(() => {
         if (inViewContent) {
             controls.start({
-                x: ["0%", "-50%"],
+                x: ["0%", "-100%"],
                 transition: {
-                    x: { repeat: Infinity, repeatType: "loop", duration: 15, ease: "linear" },
+                    x: {
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        duration: 40,
+                        ease: "linear",
+                    },
                 },
             });
         }
@@ -26,9 +31,14 @@ const HeroSection = () => {
             controls.stop();
         } else if (inViewContent) {
             controls.start({
-                x: ["0%", "-50%"],
+                x: ["0%", "-100%"],
                 transition: {
-                    x: { repeat: Infinity, repeatType: "loop", duration: 15, ease: "linear" },
+                    x: {
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        duration: 40,
+                        ease: "linear",
+                    },
                 },
             });
         }
@@ -36,29 +46,12 @@ const HeroSection = () => {
 
     return (
         <section
-            className="
-                w-full
-                min-h-screen
-                flex items-center justify-center
-                px-4 sm:px-6 md:px-8 lg:px-12
-                py-16 sm:py-20 lg:py-24
-            "
+            className="w-full min-h-screen overflow-hidden flex items-center justify-center px-6 sm:px-8 md:px-12 lg:px-16 py-24 sm:py-20 lg:py-16"
             id="intro"
         >
-            <div
-                className="
-                    flex
-                    flex-col lg:flex-row
-                    items-center
-                    justify-center lg:justify-between
-                    gap-6 sm:gap-8 lg:gap-12
-                    w-full
-                    max-w-[1200px]
-                "
-            >
-                {/* ==================== */}
-                {/* IMAGE SECTION        */}
-                {/* ==================== */}
+            <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-10 sm:gap-12 lg:gap-16 w-full max-w-[1200px]">
+
+                {/* IMAGE SECTION */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={inViewContent ? { opacity: 1, scale: 1 } : {}}
@@ -77,58 +70,25 @@ const HeroSection = () => {
                                 ease: "easeInOut",
                             }}
                             whileHover={{ scale: 1.05 }}
-                            className="
-                                w-[320px] h-[320px]
-                                sm:w-[300px] sm:h-[300px]
-                                md:w-[320px] md:h-[320px]
-                                lg:w-[350px] lg:h-[350px]
-                                xl:w-[400px] xl:h-[400px]
-                                rounded-full
-                                object-cover
-                                shadow-[0_0_80px_rgba(49,130,206,0.6)]
-                                hover:shadow-[0_0_120px_rgba(49,130,206,0.9)]
-                                lg:shadow-[0_0_50px_rgba(49,130,206,0.5)]
-                                lg:hover:shadow-[0_0_80px_rgba(49,130,206,0.8)]
-                                transition-shadow duration-500
-                            "
+                            className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[340px] md:h-[340px] lg:w-[380px] lg:h-[380px] xl:w-[420px] xl:h-[420px] rounded-full object-cover shadow-[0_0_60px_rgba(49,130,206,0.5)] hover:shadow-[0_0_100px_rgba(49,130,206,0.8)] transition-shadow duration-500"
                         />
                     </Suspense>
                 </motion.div>
 
-                {/* ==================== */}
-                {/* TEXT CONTENT         */}
-                {/* ==================== */}
+                {/* TEXT CONTENT */}
                 <motion.div
                     ref={refContent}
                     initial={{ opacity: 0, y: 50 }}
                     animate={inViewContent ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="
-                        flex flex-col
-                        items-center lg:items-start
-                        text-center lg:text-left
-                        order-2 lg:order-1
-                        w-full
-                        lg:max-w-[600px]
-                    "
+                    className="flex flex-col items-center lg:items-start text-center lg:text-left order-2 lg:order-1 w-full lg:max-w-[600px]"
                 >
                     {/* Heading */}
                     <motion.h1
                         initial={{ opacity: 0, y: 40 }}
                         animate={inViewContent ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.2, duration: 0.6 }}
-                        className="
-                            text-white
-                            text-[36px]
-                            sm:text-[32px]
-                            md:text-[38px]
-                            lg:text-[48px]
-                            xl:text-[60px]
-                            font-[800]
-                            sm:font-[700]
-                            leading-[1.2]
-                            lg:leading-normal
-                        "
+                        className="text-white text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[56px] font-[700] leading-[1.2] sm:leading-[1.25]"
                     >
                         Hi, I&apos;m{" "}
                         <span className="text-heading">Muthumaniraja</span>,{" "}
@@ -136,36 +96,20 @@ const HeroSection = () => {
                         Web Developer.
                     </motion.h1>
 
-                    {/* Marquee */}
+                    {/* FIXED MARQUEE */}
                     <div
-                        className="
-                            relative
-                            w-full
-                            overflow-hidden
-                            mt-6 sm:mt-4 lg:mt-3
-                            py-3 sm:py-2
-                        "
+                        className="relative w-full overflow-hidden mt-6 sm:mt-7 py-3"
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
                         <motion.div
                             animate={controls}
-                            className="flex whitespace-nowrap"
+                            className="flex whitespace-nowrap w-max"
                         >
-                            {[1, 2].map((_, index) => (
+                            {[1, 2, 3, 4].map((_, index) => (
                                 <span
                                     key={index}
-                                    className="
-                                        text-[22px]
-                                        sm:text-[18px]
-                                        md:text-[20px]
-                                        lg:text-[24px]
-                                        xl:text-[24px]
-                                        font-[600]
-                                        text-transparent
-                                        bg-clip-text
-                                        mx-4
-                                    "
+                                    className="text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-[600] text-transparent bg-clip-text px-8"
                                     style={{
                                         backgroundImage: "linear-gradient(90deg, #00c6ff, #0072ff, #00c6ff)",
                                     }}
@@ -181,34 +125,13 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 40 }}
                         animate={inViewContent ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.6, duration: 0.6 }}
-                        className="
-                            flex
-                            items-center
-                            justify-center lg:justify-start
-                            gap-5 sm:gap-4 lg:gap-4
-                            flex-row
-                            mt-10 sm:mt-8 lg:mt-8
-                        "
+                        className="flex items-center justify-center lg:justify-start gap-4 sm:gap-5 flex-row mt-10 sm:mt-12"
                     >
                         <ScrollLink
                             to="contact"
                             smooth={true}
                             duration={1000}
-                            className="
-                                px-10 sm:px-6 lg:px-6
-                                py-4 sm:py-3 lg:py-3
-                                cursor-pointer
-                                rounded-full
-                                bg-white
-                                hover:bg-gray-200
-                                text-black
-                                text-[20px] sm:text-[16px] lg:text-lg
-                                font-[700]
-                                text-center
-                                transition-all duration-300
-                                hover:scale-105
-                                shadow-xl sm:shadow-lg
-                            "
+                            className="px-8 sm:px-10 md:px-10 py-4 sm:py-4 cursor-pointer rounded-full bg-white hover:bg-gray-200 text-black text-[18px] sm:text-[18px] md:text-[19px] font-[700] text-center transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                             Hire Me
                         </ScrollLink>
@@ -218,27 +141,13 @@ const HeroSection = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             download
-                            className="
-                                px-10 sm:px-6 lg:px-6
-                                py-4 sm:py-3 lg:py-3
-                                rounded-full
-                                bg-transparent
-                                border-[3px] sm:border-2 lg:border-2
-                                border-white
-                                text-white
-                                text-[20px] sm:text-[16px] lg:text-lg
-                                font-[700] sm:font-[600]
-                                text-center
-                                transition-all duration-300
-                                hover:bg-white
-                                hover:text-black
-                                hover:scale-105
-                            "
+                            className="px-8 sm:px-10 md:px-10 py-4 sm:py-4 rounded-full bg-transparent border-2 border-white text-white text-[18px] sm:text-[18px] md:text-[19px] font-[600] text-center transition-all duration-300 hover:bg-white hover:text-black hover:scale-105"
                         >
                             Download CV
                         </a>
                     </motion.div>
                 </motion.div>
+
             </div>
         </section>
     );
