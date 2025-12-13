@@ -86,8 +86,8 @@ const About = () => {
           <p className="text-textWhite p-4 text-lg sm:text-xl sm:leading-7">
             Hi! I’m <strong>Muthumaniraja</strong>, a Full Stack Python Developer
             passionate about creating web applications that are both functional
-            and visually appealing. I specialize in <strong>Django,React.js,
-            Tailwind CSS, and MySQl</strong>.
+            and visually appealing. I specialize in <strong>Python,Django,React.js
+            and MySQl</strong>.
             <br /><br />
             I love exploring new technologies and applying them to solve
             real-world problems. With a focus on clean code and smooth user

@@ -4,11 +4,18 @@ export default {
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-        // updated content
-        //  "./src/**/*.{html, jsx}",
-        // "./src/**/*",
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
+        screens: {
+            'xs': '480px',    // Extra small devices
+            'sm': '640px',    // Small devices
+            'md': '768px',    // Medium devices
+            'lg': '1024px',   // Large devices
+            'xl': '1280px',   // Extra large devices
+            '2xl': '1536px',  // 2X large devices
+        },
         extend: {
             backgroundImage: {
                 "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -17,7 +24,6 @@ export default {
             },
             colors: {
                 bgDark: "#121212",
-                // bgDark: "#0b192f",
                 textPara: "#57556C",
                 heading: "#3182CE",
                 textWhite: "#FAF7F2",

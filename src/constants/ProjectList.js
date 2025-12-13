@@ -1,9 +1,3 @@
-import ecommerce from "../assets/projects/ecommerce.png";
-import discord from "../assets/projects/discord.png";
-import keeper from "../assets/projects/keeper.png";
-import authorisation from "../assets/projects/authorisation.png";
-import notion from "../assets/projects/notion.png";
-import byte from "../assets/projects/byte.png";
 import cafe from "../assets/projects/cafe.png";
 import food from "../assets/projects/food.png";
 import portfolio from "../assets/projects/portfolio.png";
@@ -45,5 +39,4 @@ export const ProjectList = [
        
         demo: "https://portfolio-react-sepia-pi-61.vercel.app/",
     },
- 
 ];
