@@ -131,7 +131,7 @@ const HeroSection = () => {
                             to="contact"
                             smooth={true}
                             duration={1000}
-                            className="px-8 sm:px-10 md:px-10 py-4 sm:py-4 cursor-pointer rounded-full bg-white hover:bg-gray-200 text-black text-[18px] sm:text-[18px] md:text-[19px] font-[700] text-center transition-all duration-300 hover:scale-105 shadow-lg"
+                            className="px-6 sm:px-10 md:px-10 py-4 sm:py-2 cursor-pointer rounded-full bg-white hover:bg-gray-200 text-black text-[18px] sm:text-[18px] md:text-[19px] font-[700] text-center transition-all duration-300 hover:scale-105 shadow-lg"
                         >
                             Hire Me
                         </ScrollLink>
@@ -141,7 +141,7 @@ const HeroSection = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             download
-                            className="px-8 sm:px-10 md:px-10 py-4 sm:py-4 rounded-full bg-transparent border-2 border-white text-white text-[18px] sm:text-[18px] md:text-[19px] font-[600] text-center transition-all duration-300 hover:bg-white hover:text-black hover:scale-105"
+                            className="px-6 sm:px-10 md:px-10 py-4 sm:py-2 rounded-full bg-transparent border-2 border-white text-white text-[18px] sm:text-[18px] md:text-[19px] font-[600] text-center transition-all duration-300 hover:bg-white hover:text-black hover:scale-105"
                         >
                             Download CV
                         </a>
